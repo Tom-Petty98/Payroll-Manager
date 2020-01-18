@@ -1,0 +1,13 @@
+C:\Users\Tom\Documents\coding\visual studio\Payroll Manager\Payroll Manager.Services\bin\Debug\netcoreapp3.1\Payroll Manager.Services.deps.json
+C:\Users\Tom\Documents\coding\visual studio\Payroll Manager\Payroll Manager.Services\bin\Debug\netcoreapp3.1\Payroll Manager.Services.dll
+C:\Users\Tom\Documents\coding\visual studio\Payroll Manager\Payroll Manager.Services\bin\Debug\netcoreapp3.1\Payroll Manager.Services.pdb
+C:\Users\Tom\Documents\coding\visual studio\Payroll Manager\Payroll Manager.Services\bin\Debug\netcoreapp3.1\Payroll Manager.Entity.dll
+C:\Users\Tom\Documents\coding\visual studio\Payroll Manager\Payroll Manager.Services\bin\Debug\netcoreapp3.1\Payroll Manager.Persistence.dll
+C:\Users\Tom\Documents\coding\visual studio\Payroll Manager\Payroll Manager.Services\bin\Debug\netcoreapp3.1\Payroll Manager.Entity.pdb
+C:\Users\Tom\Documents\coding\visual studio\Payroll Manager\Payroll Manager.Services\bin\Debug\netcoreapp3.1\Payroll Manager.Persistence.pdb
+C:\Users\Tom\Documents\coding\visual studio\Payroll Manager\Payroll Manager.Services\obj\Debug\netcoreapp3.1\Payroll Manager.Services.csprojAssemblyReference.cache
+C:\Users\Tom\Documents\coding\visual studio\Payroll Manager\Payroll Manager.Services\obj\Debug\netcoreapp3.1\Payroll Manager.Services.AssemblyInfoInputs.cache
+C:\Users\Tom\Documents\coding\visual studio\Payroll Manager\Payroll Manager.Services\obj\Debug\netcoreapp3.1\Payroll Manager.Services.AssemblyInfo.cs
+C:\Users\Tom\Documents\coding\visual studio\Payroll Manager\Payroll Manager.Services\obj\Debug\netcoreapp3.1\Payroll Manager.Services.csproj.CopyComplete
+C:\Users\Tom\Documents\coding\visual studio\Payroll Manager\Payroll Manager.Services\obj\Debug\netcoreapp3.1\Payroll Manager.Services.dll
+C:\Users\Tom\Documents\coding\visual studio\Payroll Manager\Payroll Manager.Services\obj\Debug\netcoreapp3.1\Payroll Manager.Services.pdb
