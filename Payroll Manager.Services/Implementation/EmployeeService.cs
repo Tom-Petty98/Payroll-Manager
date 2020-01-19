@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Payroll_Manager.Services.Implementation
 {
-    class EmployeeService : IEmployeeService
+    public class EmployeeService : IEmployeeService
     {
         // crud operations
         private readonly ApplicationDbContext _context;

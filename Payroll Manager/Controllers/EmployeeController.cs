@@ -40,12 +40,14 @@ namespace Payroll_Manager.Controllers
                 
             return View(employees);
         }
-        [HttpGet]    // http - hper text transfer protocol. Designed for communication between clients and servers, Get retrives data
+        [HttpGet]    // http - hper text transfer protocol. Designed for communication between clients and servers. Get retrives data
         public IActionResult Create()
         {
             var model = new EmployeeCreateViewModel();
             return View(model);
         }
+
+
         [HttpPost]   // Sends data to create or update a resource
         [ValidateAntiForgeryToken]  // Prevents cross-site Request Forgery Attacks
         public async Task<IActionResult> Create(EmployeeCreateViewModel model)

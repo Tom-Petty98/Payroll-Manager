@@ -12,6 +12,8 @@ using Payroll_Manager.Persistence;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Payroll_Manager.Services;
+using Payroll_Manager.Services.Implementation;
 
 namespace Payroll_Manager
 {
@@ -34,6 +36,7 @@ namespace Payroll_Manager
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddControllersWithViews();
             services.AddRazorPages();
+            services.AddScoped<IEmployeeService, EmployeeService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
