@@ -159,3 +159,7 @@ C:\Users\Tom\Documents\coding\visual studio\Payroll Manager\Payroll Manager\bin\
 C:\Users\Tom\Documents\coding\visual studio\Payroll Manager\Payroll Manager\obj\Debug\netcoreapp3.1\Payroll Manager.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Tom\Documents\coding\visual studio\Payroll Manager\Payroll Manager\obj\Debug\netcoreapp3.1\Payroll Manager.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Tom\Documents\coding\visual studio\Payroll Manager\Payroll Manager\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_CookieConsentPartial.cshtml.g.cs
+C:\Users\Tom\Documents\coding\visual studio\Payroll Manager\Payroll Manager\obj\Debug\netcoreapp3.1\Razor\Views\Employee\Create.cshtml.g.cs
+C:\Users\Tom\Documents\coding\visual studio\Payroll Manager\Payroll Manager\obj\Debug\netcoreapp3.1\Razor\Views\Employee\Index.cshtml.g.cs
+C:\Users\Tom\Documents\coding\visual studio\Payroll Manager\Payroll Manager\obj\Debug\netcoreapp3.1\Razor\Views\Employee\Detail.cshtml.g.cs
+C:\Users\Tom\Documents\coding\visual studio\Payroll Manager\Payroll Manager\obj\Debug\netcoreapp3.1\Razor\Views\Employee\Edit.cshtml.g.cs

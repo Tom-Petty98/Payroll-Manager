@@ -11,6 +11,10 @@ namespace Payroll_Manager.Services.Implementation
 {
     public class EmployeeService : IEmployeeService
     {
+        //mediates communication between a controller and repository layer. 
+        //The service layer contains business logic. In particular, it contains validation logic.
+
+
         // crud operations
         private readonly ApplicationDbContext _context;
 
