@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Payroll_Manager.Entity;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace Payroll_Manager.Services
 {
@@ -17,5 +18,6 @@ namespace Payroll_Manager.Services
         decimal UnionFees(int id);
         decimal StudentLoanRepaymentAmount(int id, decimal totalAmount);
         IEnumerable<Employee> GetAll();
+        IEnumerable<SelectListItem> GetAllEmployeesForPayroll();
     }
 }

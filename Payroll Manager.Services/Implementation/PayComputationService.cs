@@ -18,7 +18,7 @@ namespace Payroll_Manager.Services.Implementation
         {
             _context = context;
         }
-        public decimal ContracturalEarnings(decimal contractualHours, decimal hoursWorked, decimal hourlyRate)
+        public decimal ContractualEarnings(decimal contractualHours, decimal hoursWorked, decimal hourlyRate)
         {
             if (hoursWorked < contractualHours)
             {
@@ -31,7 +31,7 @@ namespace Payroll_Manager.Services.Implementation
             return contracturalEarnings;
         }
 
-        public async Task CraeteAsync(PaymentRecord paymentRecord)
+        public async Task CreateAsync(PaymentRecord paymentRecord)
         {
             await _context.PaymentRecords.AddAsync(paymentRecord);
             await _context.SaveChangesAsync();
@@ -76,5 +76,8 @@ namespace Payroll_Manager.Services.Implementation
 
         public decimal TotalEarnings(decimal overtimeEarnings, decimal contractualEarnings)
             => overtimeEarnings + contractualEarnings;
+
+        public TaxYear GetTaxYearById(int id) => _context.TaxYears.Where(year => year.Id == id).FirstOrDefault();
+        
     }
 }
