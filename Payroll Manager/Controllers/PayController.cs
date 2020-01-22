@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Payroll_Manager.Entity;
 using Payroll_Manager.Models;
 using Payroll_Manager.Services;
+using RotativaCore;
 
 namespace Payroll_Manager.Controllers
 {
@@ -102,9 +103,95 @@ namespace Payroll_Manager.Controllers
             return View();
         }
 
-        public IActionResult Detail()
+        public IActionResult Detail(int id)
         {
-            return View();
+            var paymentRecord = _payComputationService.GetById(id);
+            if (paymentRecord == null)
+            {
+                return NotFound();
+            }
+
+            var model = new PaymentRecordDetailViewModel()
+            {
+                Id = paymentRecord.Id,
+                EmployeeId = paymentRecord.EmployeeId,
+                FullName = paymentRecord.FullName,
+                NiNo = paymentRecord.NiNo,
+                PayDate = paymentRecord.PayDate,
+                PayMonth = paymentRecord.PayMonth,
+                TaxYearId = paymentRecord.TaxYearId,
+                Year = _payComputationService.GetTaxYearById(paymentRecord.TaxYearId).YearOfTax,
+                TaxCode = paymentRecord.TaxCode,
+                HourlyRate = paymentRecord.HourlyRate,
+                HoursWorked = paymentRecord.HoursWorked,
+                ContractualHours = paymentRecord.ContractualHours,
+                OvertimeHours = paymentRecord.OvertimeHours,
+                OvertimeRate = _payComputationService.OvertimeRate(paymentRecord.HourlyRate),
+                ContractualEarnings = paymentRecord.ContractualEarnings,
+                OvertimeEarnings = paymentRecord.OvertimeEarnings,
+                Tax = paymentRecord.Tax,
+                NIC = paymentRecord.NIC,
+                UnionFee = paymentRecord.UnionFee,
+                SLC = paymentRecord.SLC,
+                TotalEarnings = paymentRecord.TotalEarnings,
+                TotalDeduction = paymentRecord.TotalDeduction,
+                Employee = paymentRecord.Employee,
+                TaxYear = paymentRecord.TaxYear,
+                NetPayment = paymentRecord.NetPayment
+            };
+            return View(model);
+        }
+
+        // Payslip action method the same as Detail (no need for new viewmodel)
+        [HttpGet]
+        public IActionResult Payslip(int id)
+        {
+            var paymentRecord = _payComputationService.GetById(id);
+            if (paymentRecord == null)
+            {
+                return NotFound();
+            }
+
+            var model = new PaymentRecordDetailViewModel()
+            {
+                Id = paymentRecord.Id,
+                EmployeeId = paymentRecord.EmployeeId,
+                FullName = paymentRecord.FullName,
+                NiNo = paymentRecord.NiNo,
+                PayDate = paymentRecord.PayDate,
+                PayMonth = paymentRecord.PayMonth,
+                TaxYearId = paymentRecord.TaxYearId,
+                Year = _payComputationService.GetTaxYearById(paymentRecord.TaxYearId).YearOfTax,
+                TaxCode = paymentRecord.TaxCode,
+                HourlyRate = paymentRecord.HourlyRate,
+                HoursWorked = paymentRecord.HoursWorked,
+                ContractualHours = paymentRecord.ContractualHours,
+                OvertimeHours = paymentRecord.OvertimeHours,
+                OvertimeRate = _payComputationService.OvertimeRate(paymentRecord.HourlyRate),
+                ContractualEarnings = paymentRecord.ContractualEarnings,
+                OvertimeEarnings = paymentRecord.OvertimeEarnings,
+                Tax = paymentRecord.Tax,
+                NIC = paymentRecord.NIC,
+                UnionFee = paymentRecord.UnionFee,
+                SLC = paymentRecord.SLC,
+                TotalEarnings = paymentRecord.TotalEarnings,
+                TotalDeduction = paymentRecord.TotalDeduction,
+                Employee = paymentRecord.Employee,
+                TaxYear = paymentRecord.TaxYear,
+                NetPayment = paymentRecord.NetPayment
+            };
+            return View(model);
+        }
+
+        // For payslip Pdf we need to use (Install-Package RotativaCore -Version 3.0.0 (version coresponds to webcore app version))
+        // This extension HTML to pdf with WkHtmlToPdf.
+        public IActionResult GeneratePayslipPdf(int id)
+        {
+            var payslip = new ActionAsPdf("Payslip", new { id = id })
+            { 
+                 FileName = "payslip.pdf"
+            };
+            return payslip;
         }
     }
 }
