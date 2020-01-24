@@ -13,6 +13,7 @@ using Payroll_Manager.Services;
 
 namespace Payroll_Manager.Controllers
 {
+   // [Authorize]          // means you just have to be logged in
     public class EmployeeController : Controller
     {
         private readonly IEmployeeService _employeeService;
@@ -24,7 +25,8 @@ namespace Payroll_Manager.Controllers
             _hostingEnvironment = hostingEnvironment;
         }
 
-        public IActionResult Index()
+        // including pagination (pages)
+        public IActionResult Index(int? pageNumber)
         {
             var employees = _employeeService.GetAll().Select(employee => new EmployeeIndexViewModel
             {
@@ -37,8 +39,8 @@ namespace Payroll_Manager.Controllers
                 Designation = employee.Designation, 
                 City = employee.City
             }).ToList();
-                
-            return View(employees);
+            int pageSize = 4;   
+            return View(EmployeeListPagination<EmployeeIndexViewModel>.Create(employees, pageNumber ?? 1, pageSize));
         }
         [HttpGet]    // http - hper text transfer protocol. Designed for communication between clients and servers. Get retrives data
         public IActionResult Create()

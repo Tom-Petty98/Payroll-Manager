@@ -1,4 +1,4 @@
-﻿@model IEnumerable<EmployeeIndexViewModel>
+﻿@model EmployeeListPagination<EmployeeIndexViewModel>
 @*Dont need to add full name as it can be found in _ViewImports.cshtml*@
 
 @{ ViewBag.Title = "Employee";}
@@ -61,8 +61,8 @@
                                     </tr>
                                 }
                             </tbody>
-                        </table><br />
-                        @* @{
+                        </table><br />              @* Adding pages to the list *@
+                         @{
                                 var disablePrevious = !Model.IsPreviousPageAvailable ? "disabled" : "";
                                 var disableNext = !Model.IsNextPageAvailable ? "disabled" : "";
                             }
@@ -76,7 +76,7 @@
                                asp-route-pageNumber="@(Model.PageIndex + 1)"
                                class="btn btn-primary @disableNext">
                                 Next
-                            </a>   *@
+                            </a>   
 
                     </div>
                 </div>

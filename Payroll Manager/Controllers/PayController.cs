@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Payroll_Manager.Entity;
 using Payroll_Manager.Models;
@@ -9,7 +10,10 @@ using Payroll_Manager.Services;
 using RotativaCore;
 
 namespace Payroll_Manager.Controllers
-{
+{                                                       // User has to be one of the declared roles for acceess
+   // [Authorize(Roles = "Admin, Manager, Demo")]       
+                                                       // If we declare them seperately (e.g [Authorize(Roles = "Admin")], 
+                                                       // [Authorize(Roles = "Manager")] )the user has to be both
     public class PayController : Controller
     {
         private readonly IPayComputationService _payComputationService;
@@ -55,6 +59,7 @@ namespace Payroll_Manager.Controllers
             return View(payRecords);
         }
 
+       // [Authorize(Roles = "Admin")]
         public IActionResult Create()
         {
             ViewBag.employees = _employeeService.GetAllEmployeesForPayroll();
@@ -65,6 +70,7 @@ namespace Payroll_Manager.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+       // [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Create(PaymentRecordCreateViewModel model)
         {
             if (ModelState.IsValid)
@@ -144,6 +150,7 @@ namespace Payroll_Manager.Controllers
 
         // Payslip action method the same as Detail (no need for new viewmodel)
         [HttpGet]
+      //  [AllowAnonymous]
         public IActionResult Payslip(int id)
         {
             var paymentRecord = _payComputationService.GetById(id);
@@ -184,7 +191,7 @@ namespace Payroll_Manager.Controllers
         }
 
         // For payslip Pdf we need to use (Install-Package RotativaCore -Version 3.0.0 (version coresponds to webcore app version))
-        // This extension HTML to pdf with WkHtmlToPdf.
+        // This extension HTML to pdf with WkHtmlToPdf
         public IActionResult GeneratePayslipPdf(int id)
         {
             var payslip = new ActionAsPdf("Payslip", new { id = id })
