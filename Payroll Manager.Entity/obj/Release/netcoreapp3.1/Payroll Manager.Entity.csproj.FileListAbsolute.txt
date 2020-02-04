@@ -1,0 +1,8 @@
+C:\Users\Tom\Documents\coding\visual studio\Payroll Manager\Payroll Manager.Entity\bin\Release\netcoreapp3.1\Payroll Manager.Entity.deps.json
+C:\Users\Tom\Documents\coding\visual studio\Payroll Manager\Payroll Manager.Entity\bin\Release\netcoreapp3.1\Payroll Manager.Entity.dll
+C:\Users\Tom\Documents\coding\visual studio\Payroll Manager\Payroll Manager.Entity\bin\Release\netcoreapp3.1\Payroll Manager.Entity.pdb
+C:\Users\Tom\Documents\coding\visual studio\Payroll Manager\Payroll Manager.Entity\obj\Release\netcoreapp3.1\Payroll Manager.Entity.csprojAssemblyReference.cache
+C:\Users\Tom\Documents\coding\visual studio\Payroll Manager\Payroll Manager.Entity\obj\Release\netcoreapp3.1\Payroll Manager.Entity.AssemblyInfoInputs.cache
+C:\Users\Tom\Documents\coding\visual studio\Payroll Manager\Payroll Manager.Entity\obj\Release\netcoreapp3.1\Payroll Manager.Entity.AssemblyInfo.cs
+C:\Users\Tom\Documents\coding\visual studio\Payroll Manager\Payroll Manager.Entity\obj\Release\netcoreapp3.1\Payroll Manager.Entity.dll
+C:\Users\Tom\Documents\coding\visual studio\Payroll Manager\Payroll Manager.Entity\obj\Release\netcoreapp3.1\Payroll Manager.Entity.pdb

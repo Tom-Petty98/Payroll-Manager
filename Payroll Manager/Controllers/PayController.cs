@@ -59,7 +59,7 @@ namespace Payroll_Manager.Controllers
             return View(payRecords);
         }
 
-       // [Authorize(Roles = "Admin")]
+        // [Authorize(Roles = "Admin")]
         public IActionResult Create()
         {
             ViewBag.employees = _employeeService.GetAllEmployeesForPayroll();

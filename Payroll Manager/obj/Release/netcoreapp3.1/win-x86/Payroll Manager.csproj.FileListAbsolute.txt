@@ -1,0 +1,8 @@
+C:\Users\Tom\Documents\coding\visual studio\Payroll Manager\Payroll Manager\obj\Release\netcoreapp3.1\win-x86\Payroll Manager.csprojAssemblyReference.cache
+C:\Users\Tom\Documents\coding\visual studio\Payroll Manager\Payroll Manager\obj\Release\netcoreapp3.1\win-x86\staticwebassets\Payroll Manager.StaticWebAssets.Manifest.cache
+C:\Users\Tom\Documents\coding\visual studio\Payroll Manager\Payroll Manager\obj\Release\netcoreapp3.1\win-x86\staticwebassets\Payroll Manager.StaticWebAssets.xml
+C:\Users\Tom\Documents\coding\visual studio\Payroll Manager\Payroll Manager\obj\Release\netcoreapp3.1\win-x86\Payroll Manager.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Tom\Documents\coding\visual studio\Payroll Manager\Payroll Manager\obj\Release\netcoreapp3.1\win-x86\Payroll Manager.RazorAssemblyInfo.cache
+C:\Users\Tom\Documents\coding\visual studio\Payroll Manager\Payroll Manager\obj\Release\netcoreapp3.1\win-x86\Payroll Manager.RazorAssemblyInfo.cs
+C:\Users\Tom\Documents\coding\visual studio\Payroll Manager\Payroll Manager\obj\Release\netcoreapp3.1\win-x86\Payroll Manager.AssemblyInfoInputs.cache
+C:\Users\Tom\Documents\coding\visual studio\Payroll Manager\Payroll Manager\obj\Release\netcoreapp3.1\win-x86\Payroll Manager.AssemblyInfo.cs
